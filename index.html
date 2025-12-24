@@ -1,99 +1,118 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>easy rental | Rent a Car Software</title>
 
 <style>
-:root {
-  --black:#111;
-  --gray:#777;
-  --light:#f5f5f5;
+:root{
+ --black:#0f0f0f;
+ --gray:#666;
+ --light:#f6f6f6;
 }
 
-body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background: var(--light);
-  color: var(--black);
+body{
+ margin:0;
+ font-family:Arial, sans-serif;
+ background:var(--light);
+ color:#111;
 }
 
-header {
-  background: var(--black);
-  color: white;
-  padding: 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+header{
+ background:#000;
+ color:#fff;
+ padding:15px 25px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
 }
 
-nav a {
-  color:white;
-  margin:0 10px;
-  text-decoration:none;
-  font-weight:bold;
+nav a{
+ color:#fff;
+ text-decoration:none;
+ margin:0 10px;
+ font-weight:bold;
 }
 
-select { padding:6px; }
+select{padding:5px}
 
-.hero {
-  padding:80px 20px;
-  text-align:center;
-  background: linear-gradient(to right,#000,#333);
-  color:white;
+.hero{
+ background:linear-gradient(120deg,#000,#333);
+ color:#fff;
+ padding:90px 20px;
+ text-align:center;
 }
 
-.btn {
-  display:inline-block;
-  margin-top:20px;
-  padding:15px 30px;
-  background:white;
-  color:black;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:4px;
+.hero h1{font-size:38px}
+.hero p{color:#ccc}
+
+.btn{
+ background:#fff;
+ color:#000;
+ padding:15px 30px;
+ text-decoration:none;
+ font-weight:bold;
+ border-radius:4px;
+ display:inline-block;
+ margin-top:20px;
 }
 
-section {
-  padding:60px 20px;
-  max-width:1100px;
-  margin:auto;
+section{
+ max-width:1100px;
+ margin:auto;
+ padding:60px 20px;
 }
 
-.grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:20px;
 }
 
-.card {
-  background:white;
-  padding:25px;
-  border-radius:6px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+.card{
+ background:#fff;
+ padding:25px;
+ border-radius:6px;
+ box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-.card strong { font-size:28px; }
-
-.dashboard {
-  background:#111;
-  color:white;
-  padding:40px;
-  border-radius:8px;
+.dark{
+ background:#111;
+ color:#fff;
+ border-radius:8px;
+ padding:40px;
 }
 
-.dashboard div {
-  background:#222;
-  padding:20px;
-  margin:10px 0;
-  border-radius:6px;
+.dark div{
+ background:#1f1f1f;
+ margin:10px 0;
+ padding:20px;
+ border-radius:6px;
 }
 
-footer {
-  background:#000;
-  color:#aaa;
-  text-align:center;
-  padding:15px;
+form input,form textarea{
+ width:100%;
+ padding:12px;
+ margin:8px 0;
+ border-radius:4px;
+ border:1px solid #ccc;
+}
+
+form button{
+ background:#000;
+ color:#fff;
+ padding:12px;
+ width:100%;
+ border:none;
+ font-weight:bold;
+ border-radius:4px;
+}
+
+footer{
+ background:#000;
+ color:#aaa;
+ text-align:center;
+ padding:15px;
 }
 </style>
 </head>
@@ -101,107 +120,147 @@ footer {
 <body>
 
 <header>
-  <h2 id="logo">easy rental</h2>
-  <nav>
-    <a href="#features" id="navFeatures">Features</a>
-    <a href="#pricing" id="navPricing">Pricing</a>
-    <a href="#demo" id="navDemo">Demo</a>
-    <a href="#contact" id="navContact">Contact</a>
-  </nav>
-  <select id="lang">
-    <option value="en">EN</option>
-    <option value="ar">AR</option>
-    <option value="tr">TR</option>
-  </select>
+<h2>easy rental</h2>
+<nav>
+<a href="#features" id="n1">Features</a>
+<a href="#how" id="n2">How It Works</a>
+<a href="#pricing" id="n3">Pricing</a>
+<a href="#demo" id="n4">Demo</a>
+<a href="#contact" id="n5">Contact</a>
+</nav>
+<select id="lang">
+<option value="en">EN</option>
+<option value="ar">AR</option>
+<option value="tr">TR</option>
+</select>
 </header>
 
 <div class="hero">
-  <h1 id="heroTitle">Web-Based Rent a Car Software</h1>
-  <p id="heroText">Manage your car rental business easily</p>
-  <a href="#pricing" class="btn" id="heroBtn">View Plans</a>
+<h1 id="heroTitle">Smart Rent a Car Software</h1>
+<p id="heroText">All-in-one system to manage your rental business</p>
+<a href="#contact" class="btn" id="heroBtn">Request Demo</a>
 </div>
 
 <section id="features">
-  <h2 id="featuresTitle">Features</h2>
-  <div class="grid">
-    <div class="card"><h3 id="f1">Fleet Management</h3></div>
-    <div class="card"><h3 id="f2">Online Booking</h3></div>
-    <div class="card"><h3 id="f3">Reports</h3></div>
-  </div>
+<h2 id="featuresTitle">Key Features</h2>
+<div class="grid">
+<div class="card" id="f1">Fleet Management</div>
+<div class="card" id="f2">Online Reservations</div>
+<div class="card" id="f3">Invoices & Reports</div>
+</div>
+</section>
+
+<section id="how">
+<h2 id="howTitle">How It Works</h2>
+<div class="grid">
+<div class="card" id="h1">Add your vehicles</div>
+<div class="card" id="h2">Receive bookings</div>
+<div class="card" id="h3">Manage & analyze</div>
+</div>
 </section>
 
 <section id="pricing">
-  <h2 id="pricingTitle">Pricing Plans</h2>
-  <div class="grid">
-    <div class="card">
-      <h3 id="p1">Starter</h3>
-      <strong>$29</strong>
-      <p id="p1t">Small rental companies</p>
-    </div>
-    <div class="card">
-      <h3 id="p2">Professional</h3>
-      <strong>$59</strong>
-      <p id="p2t">Growing businesses</p>
-    </div>
-    <div class="card">
-      <h3 id="p3">Enterprise</h3>
-      <strong>$99</strong>
-      <p id="p3t">Large fleets</p>
-    </div>
-  </div>
+<h2 id="pricingTitle">Pricing</h2>
+<div class="grid">
+<div class="card"><strong>$29</strong><p id="p1">Starter</p></div>
+<div class="card"><strong>$59</strong><p id="p2">Professional</p></div>
+<div class="card"><strong>$99</strong><p id="p3">Enterprise</p></div>
+</div>
 </section>
 
 <section id="demo">
-  <h2 id="demoTitle">Dashboard Demo</h2>
-  <div class="dashboard">
-    <div id="d1">Total Cars: 120</div>
-    <div id="d2">Active Rentals: 35</div>
-    <div id="d3">Monthly Revenue: $18,400</div>
-  </div>
+<h2 id="demoTitle">System Preview</h2>
+<div class="dark">
+<div id="d1">Total Cars: 120</div>
+<div id="d2">Active Rentals: 35</div>
+<div id="d3">Monthly Revenue: $18,400</div>
+</div>
 </section>
 
 <section id="contact">
-  <h2 id="contactTitle">Contact Us</h2>
-  <p id="contactText">Request a free demo today</p>
+<h2 id="contactTitle">Request a Demo</h2>
+<form>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<input type="text" placeholder="Company">
+<textarea placeholder="Message"></textarea>
+<button type="submit" id="sendBtn">Send Request</button>
+</form>
 </section>
 
 <footer>© 2025 easy rental</footer>
 
 <script>
 const t={
-en:{dir:"ltr",heroTitle:"Web-Based Rent a Car Software",heroText:"Manage your car rental business easily",
-heroBtn:"View Plans",featuresTitle:"Features",
-pricingTitle:"Pricing Plans",demoTitle:"Dashboard Demo",
-p1:"Starter",p1t:"Small rental companies",
-p2:"Professional",p2t:"Growing businesses",
-p3:"Enterprise",p3t:"Large fleets",
-contactTitle:"Contact Us",contactText:"Request a free demo today",
-navFeatures:"Features",navPricing:"Pricing",navDemo:"Demo",navContact:"Contact",
-f1:"Fleet Management",f2:"Online Booking",f3:"Reports"},
-ar:{dir:"rtl",heroTitle:"برنامج تأجير سيارات سحابي",heroText:"إدارة شركتك بسهولة",
-heroBtn:"الأسعار",featuresTitle:"المميزات",
-pricingTitle:"خطط الأسعار",demoTitle:"عرض النظام",
-p1:"بداية",p1t:"شركات صغيرة",
-p2:"احترافي",p2t:"شركات نامية",
-p3:"مؤسسات",p3t:"أساطيل كبيرة",
-contactTitle:"تواصل معنا",contactText:"اطلب عرضًا تجريبيًا",
-navFeatures:"المميزات",navPricing:"الأسعار",navDemo:"عرض النظام",navContact:"تواصل",
-f1:"إدارة الأسطول",f2:"حجز أونلاين",f3:"تقارير"},
-tr:{dir:"ltr",heroTitle:"Araç Kiralama Yazılımı",heroText:"İşinizi kolayca yönetin",
-heroBtn:"Paketler",featuresTitle:"Özellikler",
-pricingTitle:"Fiyatlandırma",demoTitle:"Panel Demo",
-p1:"Başlangıç",p1t:"Küçük firmalar",
-p2:"Profesyonel",p2t:"Büyüyen işletmeler",
-p3:"Kurumsal",p3t:"Büyük filolar",
-contactTitle:"İletişim",contactText:"Ücretsiz demo isteyin",
-navFeatures:"Özellikler",navPricing:"Fiyatlar",navDemo:"Demo",navContact:"İletişim",
-f1:"Filo Yönetimi",f2:"Online Rezervasyon",f3:"Raporlama"}
+en:{
+heroTitle:"Smart Rent a Car Software",
+heroText:"All-in-one system to manage your rental business",
+heroBtn:"Request Demo",
+featuresTitle:"Key Features",
+howTitle:"How It Works",
+pricingTitle:"Pricing",
+demoTitle:"System Preview",
+contactTitle:"Request a Demo",
+sendBtn:"Send Request",
+f1:"Fleet Management",
+f2:"Online Reservations",
+f3:"Invoices & Reports",
+h1:"Add your vehicles",
+h2:"Receive bookings",
+h3:"Manage & analyze",
+p1:"Starter",
+p2:"Professional",
+p3:"Enterprise",
+n1:"Features",n2:"How It Works",n3:"Pricing",n4:"Demo",n5:"Contact"
+},
+ar:{
+heroTitle:"برنامج تأجير سيارات ذكي",
+heroText:"نظام متكامل لإدارة شركات تأجير السيارات",
+heroBtn:"اطلب تجربة",
+featuresTitle:"المميزات",
+howTitle:"كيف يعمل النظام",
+pricingTitle:"الأسعار",
+demoTitle:"عرض النظام",
+contactTitle:"طلب تجربة",
+sendBtn:"إرسال الطلب",
+f1:"إدارة الأسطول",
+f2:"الحجوزات الإلكترونية",
+f3:"الفواتير والتقارير",
+h1:"إضافة السيارات",
+h2:"استقبال الحجوزات",
+h3:"الإدارة والتحليل",
+p1:"بداية",
+p2:"احترافي",
+p3:"مؤسسات",
+n1:"المميزات",n2:"كيف يعمل",n3:"الأسعار",n4:"عرض النظام",n5:"تواصل"
+},
+tr:{
+heroTitle:"Akıllı Araç Kiralama Yazılımı",
+heroText:"Araç kiralama işinizi tek yerden yönetin",
+heroBtn:"Demo İste",
+featuresTitle:"Özellikler",
+howTitle:"Nasıl Çalışır",
+pricingTitle:"Fiyatlar",
+demoTitle:"Sistem Önizleme",
+contactTitle:"Demo Talebi",
+sendBtn:"Gönder",
+f1:"Filo Yönetimi",
+f2:"Online Rezervasyon",
+f3:"Fatura & Raporlar",
+h1:"Araç ekle",
+h2:"Rezervasyon al",
+h3:"Yönet & analiz et",
+p1:"Başlangıç",
+p2:"Profesyonel",
+p3:"Kurumsal",
+n1:"Özellikler",n2:"Nasıl Çalışır",n3:"Fiyatlar",n4:"Demo",n5:"İletişim"
+}
 };
 
 document.getElementById("lang").addEventListener("change",e=>{
 const l=t[e.target.value];
-document.body.dir=l.dir;
-for(let k in l){ if(document.getElementById(k)) document.getElementById(k).innerText=l[k]; }
+document.body.dir=e.target.value==="ar"?"rtl":"ltr";
+for(let k in l){if(document.getElementById(k))document.getElementById(k).innerText=l[k]}
 });
 </script>
 
